@@ -91,7 +91,7 @@
     </div>
     <div class="wrapper">
 
-
+        <div class="overlay"></div>
         <div class="mainbody">
             <div class="slider fade">
                 <img src="./img/Slider_KhoaCNTT_KN40namCB.jpg" alt="">
@@ -388,22 +388,26 @@
             const nav = document.querySelector('.nav-container')
             const wrapper = document.querySelector('.wrapper')
             const footer = document.querySelector('.footer')
+            const overlay = document.querySelector('.overlay')
+            const header = document.querySelector('.header')
+
             function a()
             {
                 if(nav.classList.contains('mobile'))
                 {
                     nav.classList.remove('mobile')
-                    wrapper.style.opacity = '1'
-                    footer.style.opacity = '1'
+                    overlay.style = 'display: none'
+                    header.style.backgroundColor = 'white'
                     
                     
                 }
                 else
                 {
-                    
+                    overlay.style = 'display: block'
                     nav.classList.add('mobile')
-                    wrapper.style.opacity = '0.1'
-                    footer.style.opacity = '0.1'
+                    header.style.backgroundColor = 'rgba(0,0,0,0.5)'
+                    // wrapper.style.opacity = '0.1'
+                    // footer.style.opacity = '0.1'
                    
                 }
             }
